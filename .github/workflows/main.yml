@@ -15,6 +15,15 @@ jobs:
     - name: Read File
       run: cat first.txt
 
+    - name: Create temp file
+      run: echo "Created from inside the pipeline" > output.txt
+
+    - name: show files after creation
+      run: ls -la
+
+    - name: Read generated output
+       run: cat output.txt
+
     - name: Current working directory
       run: pwd
 
