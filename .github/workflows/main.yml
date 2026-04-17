@@ -6,4 +6,4 @@ jobs:
 
     steps:
     - name: Print Hello
-      run: echlo "Hello Devops"
+      run: echo "Hello Devops"
