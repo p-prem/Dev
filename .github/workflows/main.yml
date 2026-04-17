@@ -1,6 +1,6 @@
 name: Multiple Step pipeline
 on: push
-job:
+jobs:
   test:
     runs-on: ubuntu-latest
 
