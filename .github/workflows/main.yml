@@ -1,21 +1,19 @@
-name: Multiple Step pipeline
+name: Real CI step
 on: push
+
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Step 1
-      run: echo "Pipeline Started"
+    - name: Checkout Code
+      run: actions/checkout@v3
 
-    - name: Step 2
+    - name: show files
+      run: ls -la
+
+    - name: Current working directory
       run: pwd
 
-    - name: Step 3
+    - name: Who am I
       run: whoami
-
-    - name: Step 4
-      run: date
-
-    - name: Step 5
-      run: echo "Pipeline Finished"
