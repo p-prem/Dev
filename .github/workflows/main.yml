@@ -22,7 +22,7 @@ jobs:
       run: ls -la
 
     - name: Read generated output
-       run: cat output.txt
+      run: cat output.txt
 
     - name: Current working directory
       run: pwd
