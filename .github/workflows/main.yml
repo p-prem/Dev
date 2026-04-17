@@ -1,0 +1,9 @@
+name: First pipeline
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Hello
+      run: echlo "Hello Devops"
