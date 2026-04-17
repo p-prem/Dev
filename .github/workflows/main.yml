@@ -12,6 +12,9 @@ jobs:
     - name: show files
       run: ls -la
 
+    - name: Read File
+      run: cat first.txt
+
     - name: Current working directory
       run: pwd
 
