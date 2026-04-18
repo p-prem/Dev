@@ -6,17 +6,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Build step
-      run: echo "Build Application"
+    - run: echo "Building"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Test step
-      run: echo "Testing application"
+    - run: echo "Testing"
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy step
-      run: echo "Deploy application"
+    - run: echo "Deploying"
