@@ -7,16 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build step
-      runs: echo "Build Application"
+      run: echo "Build Application"
 
   test:
     runs-on: ubuntu-latest
     steps:
     - name: Test step
-      runs: echo "Testing application"
+      run: echo "Testing application"
 
   deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Deploy step
-      runs: echo "Deploy application"
+      run: echo "Deploy application"
