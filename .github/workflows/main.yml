@@ -1,28 +1,22 @@
-name: Testing
+name: Multi job pipeline
 on: push
 
 jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build step
+      runs: echo "Build Application"
+
   test:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Dependencies
-      uses: actions/checkout@v3
+    - name: Test step
+      runs: echo "Testing application"
 
-    - name: Read File
-      run: cat first.txt
-
-    - name: Create temp file
-      run: echo "Created from inside the pipeline" > output.txt
-
-    - name: show files after creation
-      run: ls -la
-
-    - name: Read generated output
-      run: cat output.txt
-
-    - name: Current working directory
-      run: pwd
-
-    - name: Who am I
-      run: whoami
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy step
+      runs: echo "Deploy application"
