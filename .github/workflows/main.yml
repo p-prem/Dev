@@ -11,7 +11,8 @@ jobs:
 
     steps:
     - name: Password Printing
-      run: echo "Password: $PASSWORD"
+      run: |
+        echo "Password: $PASSWORD"
 
     - name: Print app name
       run: echo "App is $APP_NAME"
