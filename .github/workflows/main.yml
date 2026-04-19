@@ -1,25 +1,11 @@
-name: Env Pipeline
+name: Using env pipeline and secret pass
 on: push
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      APP_NAME: DevopsApp
-      ENVIRONMENT: staging
 
-    steps:
-    - name: Use secret
-      run: echo "Secret is $MY_SECRET"
+    - name: Test secret
+      run: echo "Secret is MY_SECRET"
       env:
         MY_SECRET: ${{ secrets.MY_SECRET }}
-
-    - name: Password Printing
-      run: |
-        echo "Password: $PASSWORD"
-
-    - name: Print app name
-      run: echo "App is $APP_NAME"
-
-    - name: Print environment
-      run: echo "Deploying to $ENVIRONMENT"
