@@ -5,7 +5,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Test secret
-        run: echo "Secret is $MY_SECRET"
-        env:
-          MY_SECRET: ${{ secrets.MY_SECRET }}
+      - name: Simulation Deployement
+        run: echo "Deploying app to server"
