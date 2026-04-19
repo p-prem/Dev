@@ -1,0 +1,7 @@
+name: testing
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    - name: Dependincies

@@ -1,21 +1,16 @@
-name: Multi job pipeline
+name: Env Pipeline
 on: push
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
-    steps:
-    - run: echo "Building"
+    env:
+      APP_NAME: DevopsApp
+      ENVIRONMENT: staging
 
-  test:
-    needs: build
-    runs-on: ubuntu-latest
     steps:
-    - run: echo "Testing"
+    - name: Print app name
+      run: echo "App is $APP_NAME"
 
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "Deploying"
+    - name: Print environment
+      run: echo "Deploying to $ENVIRONMENT"
