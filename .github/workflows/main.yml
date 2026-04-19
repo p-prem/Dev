@@ -5,14 +5,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      PASSWORD: 123456789
       APP_NAME: DevopsApp
       ENVIRONMENT: staging
 
     steps:
-    - name: Print system info
-      run: |
-        echo "User: $GITHUB_ACTOR"
-        echo "Repo: $GITHUB_REPOSITORY"
+    - name: Password Printing
+      run: echo "Password: $PASSWORD"
 
     - name: Print app name
       run: echo "App is $APP_NAME"
