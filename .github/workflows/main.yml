@@ -4,8 +4,8 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    - name: Test secret
-      run: echo "Secret is MY_SECRET"
-      env:
-        MY_SECRET: ${{ secrets.MY_SECRET }}
+      steps:
+        - name: Test secret
+          run: echo "Secret is MY_SECRET"
+          env:
+            MY_SECRET: ${{ secrets.MY_SECRET }}
