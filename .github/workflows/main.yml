@@ -5,11 +5,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PASSWORD: 123456789
       APP_NAME: DevopsApp
       ENVIRONMENT: staging
 
     steps:
+    - name: Use secret
+      run: echo "Secret is $MY_SECRET"
+      env:
+        MY_SECRET: ${{ secrets.MY_SECRET }}
+
     - name: Password Printing
       run: |
         echo "Password: $PASSWORD"
