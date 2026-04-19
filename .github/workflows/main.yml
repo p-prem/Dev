@@ -9,6 +9,11 @@ jobs:
       ENVIRONMENT: staging
 
     steps:
+    - name: Print system info
+      run: |
+        echo "User: $GITHUB_ACTOR"
+        echo "Repo: $GITHUB_REPOSITORY"
+
     - name: Print app name
       run: echo "App is $APP_NAME"
 
